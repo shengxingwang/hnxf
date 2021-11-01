@@ -1,0 +1,7 @@
+node_modules/
+unpackage/
+$node_modules
+!.eslintrc.js
+wxcomponents/
+uni_modules/
+components/lime-painter/
