@@ -23,5 +23,11 @@ export default {
 </script>
 
 <style>
-/*每个页面公共css */ 
+	@import './uni.scss';
+	@import './style/common.scss';
+  .flex-row{
+    justify-content: space-between;
+    display: flex;
+  }
+/*每个页面公共css */
 </style>
