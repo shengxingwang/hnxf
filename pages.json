@@ -30,7 +30,12 @@
 		},
 		{
 			"path": "pages/tabbar/my/index",
-			"style": {}
+			"style": {
+        "navigationBarTitleText": "我的",
+        "navigationBarBackgroundColor": "#F7F8FF",
+        "enablePullDownRefresh": false,
+        "navigationBarTextStyle": "black"
+      }
 		},
     {
       "path" : "pages/user/login",
@@ -76,16 +81,47 @@
               "navigationBarBackgroundColor": "#1F65B0",
               "navigationBarTextStyle": "#fff"
           }
-      }
-        ,{
+      },{
             "path" : "pages/tabbar/work/inspection/newTask/index",
             "style" :
             {
                 "navigationBarTitleText": "生成任务1",
                 "enablePullDownRefresh": false
             }
-
+      },
+      {
+        "path" : "pages/tabbar/work/inspection/newTask/newUnit",
+        "style" :
+        {
+            "navigationBarTitleText": "生成任务",
+            "enablePullDownRefresh": false
         }
+      },
+      {
+        "path" : "pages/tabbar/work/inspection/newTask/taskDetail",
+        "style" :
+        {
+            "navigationBarTitleText": "任务详情",
+            "enablePullDownRefresh": false
+        }
+      },
+      {
+        "path" : "pages/tabbar/work/inspection/newTask/unitDtetail",
+        "style" :
+        {
+            "navigationBarTitleText": "被检查单位详情",
+            "enablePullDownRefresh": false
+        }
+      },
+      {
+        "path" : "pages/tabbar/work/inspection/newTask/taskStep",
+        "style" :
+        {
+            "navigationBarTitleText": "拍照确认",
+            "enablePullDownRefresh": false
+        }
+      }
+
     ],
 	"tabBar": {
 		"borderStyle": "black",
@@ -119,7 +155,7 @@
 		]
 	},
   "globalStyle": {
-  	"navigationBarTextStyle": "#ffffff",
+  	"navigationBarTextStyle": "white",
   	"navigationBarTitleText": "uni-app",
   	"navigationBarBackgroundColor": "#1F65B0",
   	"backgroundColor": "#F8F8F8",

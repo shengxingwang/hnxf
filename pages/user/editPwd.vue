@@ -28,7 +28,7 @@
 <style lang="scss" scoped>
 .edit-pwd-wrap{
   .tit{
-    color: #4994df;
+    color: #1F65B0;
     line-height: 200rpx;
     font-size: 60rpx;
     text-align: center;

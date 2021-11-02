@@ -166,6 +166,7 @@ export default {
         padding: 20rpx 0 0;
         display: flex;
         line-height: 68rpx;
+        font-size: 32rpx;
         justify-content: space-between;
         .num{
           padding-left: 10rpx;
@@ -187,7 +188,7 @@ export default {
             text-align: center;
             width: 100%;
             color: #666;
-            height: 60rpx;
+            line-height: 60rpx;
             border:  1px solid #e4e4e4;
             border-radius: 6rpx;
           }

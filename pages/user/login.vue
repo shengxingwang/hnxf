@@ -59,7 +59,7 @@
         margin-left: 100rpx;
       }
       .txt{
-        color: #1989fa;
+        color: #1F65B0;;
       }
     }
   }

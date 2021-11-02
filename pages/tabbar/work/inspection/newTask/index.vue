@@ -28,6 +28,24 @@
       <view class="tip">
         <text class="txt">未检索到被检查单位请使用高级检索或</text>
       <text class="add-new">新增单位</text></view>
+      <view class="tab">
+        <view class="tab-head">
+          <view class="th">单位名称</view>
+          <view class="th">建筑管理</view>
+          <view class="th">选择</view>
+        </view>
+        <view class="tab-body">
+          <view class="tr">
+            <view class="td">汨罗市三德酒店管理有限公司</view>
+            <view class="td">1家</view>
+            <view class="td"><van-checkbox v-model="checked"></van-checkbox></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="btn-wrap">
+      <view class="next-btn radius-btn">下一步</view>
+      <view class="save-btn radius-btn">保存</view>
     </view>
 	</view>
 </template>
@@ -36,7 +54,8 @@
 	export default {
 		data() {
 			return {
-				showMore:false
+				showMore:false,
+        checked:false
 			}
 		},
 		methods: {
@@ -96,6 +115,76 @@
         .add-new{
           color: #1F65B0;
         }
+      }
+      .tab{
+        width: 100%;
+        margin: 32rpx 0;
+        .tab-head{
+          width: 100%;
+          display: flex;
+          .th{
+             text-align: center;
+            font-size: 28rpx;
+            font-weight: 600;
+            line-height: 72rpx;
+            border-top: 1px solid #e6e6e6;
+            border-left: 1px solid #e6e6e6;
+            width: 20%;
+            &:first-child{
+              flex: 1;
+            }
+            &:last-child{
+              border-right: 1px solid #e6e6e6;
+            }
+          }
+        }
+        .tab-body{
+          width: 100%;
+        }
+        .tr{
+          display: flex;
+          .td{
+            text-align: center;
+            font-size: 28rpx;
+            line-height: 72rpx;
+            border-top: 1px solid #e6e6e6;
+            border-left: 1px solid #e6e6e6;
+            width: 20%;
+            &:first-child{
+              flex: 1;
+            }
+            &:last-child{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-right: 1px solid #e6e6e6;
+            }
+          }
+          &:last-child{
+            .td{
+              border-bottom: 1px solid #e6e6e6;
+            }
+          }
+        }
+      }
+    }
+
+    .btn-wrap{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 100rpx;
+      .radius-btn{
+        color: #fff;
+        width: 280rpx;
+        height: 80rpx;
+        line-height: 80rpx;
+        text-align: center;
+        background: #1F65B0;
+        border-radius: 80rpx;
+      }
+      .save-btn{
+        margin-left: 20rpx;
       }
     }
   }

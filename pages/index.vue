@@ -19,6 +19,20 @@
     <navigator url="/pages/tabbar/work/inspection/newTask/index" hover-class="navigator-hover">
         <button type="default">生成任务1</button>
     </navigator>
+    <navigator url="/pages/tabbar/work/inspection/newTask/newUnit" hover-class="navigator-hover">
+        <button type="default">单位信息</button>
+    </navigator>
+    <navigator url="/pages/tabbar/work/inspection/newTask/taskDetail" hover-class="navigator-hover">
+        <button type="default">任务详情</button>
+    </navigator>
+    <navigator url="/pages/tabbar/work/inspection/newTask/unitDtetail" hover-class="navigator-hover">
+        <button type="default">被检查单位详情</button>
+    </navigator>
+    <navigator url="/pages/tabbar/work/inspection/newTask/taskStep" hover-class="navigator-hover">
+        <button type="default">任务步骤</button>
+    </navigator>
+    
+
 	</view>
 </template>
 
