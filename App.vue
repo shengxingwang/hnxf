@@ -22,7 +22,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 	@import './uni.scss';
 	@import './style/common.scss';
   .flex-row{

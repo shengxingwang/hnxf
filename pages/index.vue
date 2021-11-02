@@ -10,6 +10,15 @@
     <navigator url="/pages/user/editPwd" hover-class="navigator-hover">
         <button type="default">修改密码</button>
     </navigator>
+    <navigator url="/pages/tabbar/work/inspection/index" hover-class="navigator-hover">
+        <button type="default">监督检查</button>
+    </navigator>
+    <navigator url="/pages/tabbar/work/inspection/spotCheck/index" hover-class="navigator-hover">
+        <button type="default">监督抽查</button>
+    </navigator>
+    <navigator url="/pages/tabbar/work/inspection/newTask/index" hover-class="navigator-hover">
+        <button type="default">生成任务1</button>
+    </navigator>
 	</view>
 </template>
 

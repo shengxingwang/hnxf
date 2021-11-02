@@ -18,7 +18,11 @@
 		},
 		{
 			"path": "pages/tabbar/work/index",
-			"style": {}
+			"style": {
+        "navigationBarTitleText": "消防工作台",
+        "navigationBarBackgroundColor": "#1F65B0",
+        "navigationBarTextStyle": "#fff"
+      }
 		},
 		{
 			"path": "pages/tabbar/message/index",
@@ -26,18 +30,6 @@
 		},
 		{
 			"path": "pages/tabbar/my/index",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
 			"style": {}
 		},
     {
@@ -65,12 +57,41 @@
           "enablePullDownRefresh": false
       }
     }
-  ],
+    ,{
+      "path" : "pages/tabbar/work/inspection/index",
+      "style" :
+        {
+            "navigationBarTitleText": "消防监督检查",
+            "enablePullDownRefresh": false,
+            "navigationBarBackgroundColor": "#1F65B0",
+            "navigationBarTextStyle": "#fff"
+        }
+      }
+      ,{
+          "path" : "pages/tabbar/work/inspection/spotCheck/index",
+          "style" :
+          {
+              "navigationBarTitleText": "消防监督抽查",
+              "enablePullDownRefresh": false,
+              "navigationBarBackgroundColor": "#1F65B0",
+              "navigationBarTextStyle": "#fff"
+          }
+      }
+        ,{
+            "path" : "pages/tabbar/work/inspection/newTask/index",
+            "style" :
+            {
+                "navigationBarTitleText": "生成任务1",
+                "enablePullDownRefresh": false
+            }
+
+        }
+    ],
 	"tabBar": {
 		"borderStyle": "black",
-		"backgroundColor": "#333",
-		"color": "#8F8F94",
-		"selectedColor": "#f33e54",
+		"backgroundColor": "#fff",
+		"color": "#666",
+		"selectedColor": "#1F65B0",
 		"list": [{
 				"pagePath": "pages/tabbar/home/index",
 				"iconPath": "static/img/tabbar/home.png",
@@ -98,9 +119,9 @@
 		]
 	},
   "globalStyle": {
-  	"navigationBarTextStyle": "black",
+  	"navigationBarTextStyle": "#ffffff",
   	"navigationBarTitleText": "uni-app",
-  	"navigationBarBackgroundColor": "#F8F8F8",
+  	"navigationBarBackgroundColor": "#1F65B0",
   	"backgroundColor": "#F8F8F8",
     "usingComponents": {
       //这里为方便，全局引入了所有组件，也可以在某个page下单独引用某个组件
