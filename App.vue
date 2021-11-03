@@ -31,3 +31,6 @@ export default {
   }
 /*每个页面公共css */
 </style>
+<style>
+  @import './style/style.css';
+</style>

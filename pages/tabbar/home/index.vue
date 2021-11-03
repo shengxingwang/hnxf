@@ -8,12 +8,12 @@
           background="#1f65b0"
           input-align="center"
         />
-        <image class="s-code" src="../../../static/img/qa.png"></image>
+        <view class="s-icon hnxffont">&#xe8b5;</view>
       </view>
       <view class="top-nav">
         <view class="nav-list">
           <view v-for="(item,index) in topNavList" :key="index" class="nav-item">
-            <image class="nav-icon" :src="item.iconPath"></image>
+            <view class="icon hnxffont" v-html="item.iconPath"></view>
             <view class="nav-tit">{{item.tit}}</view>
           </view>
         </view>
@@ -29,7 +29,7 @@
      <view class="todo-content">
         <view class="todo-tit">
           <view>我的待办<text class="num">(6)</text></view>
-          <view class="opera"><image src="../../../static/img/tabbar/addactive.png"></image></view>
+          <view class="opera"><image src="../../../static/images/nav_icon.png"></image></view>
         </view>
         <view class="todo-list">
           <view v-for="(item,index) in todoList" :key="index" class="item">
@@ -37,7 +37,7 @@
             <view class="do-txt">{{item.txt}}</view>
             <view class="do-btn">检查</view>
             <view class="do-opera">
-              <image :src="item.iconPath"></image>
+              <image src="../../../static/images/opera_icon.png"></image>
             </view>
           </view>
         </view>
@@ -45,7 +45,7 @@
      <view class="todo-content">
         <view class="todo-tit">
           <view>待批事项<text class="num">(6)</text></view>
-          <view class="opera"><image src="../../../static/img/tabbar/addactive.png"></image></view>
+          <view class="opera"><image src="../../../static/images/nav_icon.png"></image></view>
         </view>
         <view class="todo-list">
           <view v-for="(item,index) in todoList" :key="index" class="item">
@@ -53,7 +53,7 @@
             <view class="do-txt">{{item.txt}}</view>
             <view class="do-btn">检查</view>
             <view class="do-opera">
-              <image :src="item.iconPath"></image>
+              <image src="../../../static/images/opera_icon.png"></image>
             </view>
           </view>
         </view>
@@ -74,7 +74,7 @@
             <view class="do-txt">{{item.txt}}</view>
             <view class="do-btn">检查</view>
             <view class="do-opera">
-              <image :src="item.iconPath"></image>
+              <image src="../../../static/images/opera_icon.png"></image>
             </view>
           </view>
         </view>
@@ -89,11 +89,11 @@ export default {
 		return {
 			title: 'Hello',
       topNavList:[
-        {tit:'双随机',iconPath:'../../../static/img/qa.png'},
-        {tit:'专项抽查',iconPath:'../../../static/img/qa.png'},
-        {tit:'跨部门',iconPath:'../../../static/img/qa.png'},
-        {tit:'复查任务',iconPath:'../../../static/img/qa.png'},
-        {tit:'入口设置',iconPath:'../../../static/img/qa.png'}
+        {tit:'双随机',iconPath:'&#xe65c;'},
+        {tit:'专项抽查',iconPath:'&#xe633;'},
+        {tit:'跨部门',iconPath:'&#xe686;'},
+        {tit:'复查任务',iconPath:'&#xe631;'},
+        {tit:'入口设置',iconPath:'&#xe600;'}
       ],
       todoList:[
         {txt:'双随双随机双随机机',iconPath:'../../../static/img/qa.png', hasDay:1},
@@ -122,10 +122,13 @@ export default {
       background: #1f65b0;
       .top-seacrch{
         display: flex;
-        .s-code{
-          width: 64rpx;
-          height: 64rpx;
-          margin-top: 22rpx;
+        .s-icon{
+          // width: 64rpx;
+          // height: 64rpx;
+          // margin-top: 22rpx;
+          line-height: 108rpx;
+          color: #fff;
+          font-size: 56rpx;
         }
       }
       .top-nav{
@@ -139,9 +142,9 @@ export default {
           width: 112rpx;
           margin-left: 31rpx;
           text-align: center;
-          .nav-icon{
-            width:60rpx;
-            height: 60rpx;
+          .icon{
+            font-size: 56rpx;
+            color: #fff;
           }
           .nav-tit{
             text-align: center;
@@ -173,12 +176,8 @@ export default {
           color: #e01919;
         }
         .opera{
-          height: 68rpx;
-          width: 30rpx;
-          image{
-            width: 100%;
-            height: 100%;
-          }
+          height: 40rpx;
+          width: 40rpx;
         }
         .sele-wrap{
           width: 220rpx;
@@ -206,12 +205,8 @@ export default {
             margin-right: 12rpx;
           }
           .do-opera{
-            height: 68rpx;
-            width: 30rpx;
-            image{
-              width: 100%;
-              height: 100%;
-            }
+            height: 40rpx;
+            width: 40rpx;
           }
           .do-btn{
             color: #3291f8;

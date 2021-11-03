@@ -5,32 +5,20 @@
     </view>
     <view class="info-opera area-wrap">
       <uni-list>
-        <uni-list-item
-          v-for="(item, index) in infoList"
-          @click="goDet(item)"
-          :key="index"
-          :title="item.txt"
-        ></uni-list-item>
+        <uni-list-item @click="goDet" title="账号信息"></uni-list-item>
+        <uni-list-item @click="clearStorage" title="清除本地缓存"  :rightText="storageSize"></uni-list-item>
       </uni-list>
     </view>
     <view class="service-opera area-wrap">
       <uni-list>
-        <uni-list-item
-          v-for="(item, index) in operaList"
-          @click="goDet(item)"
-          :key="index"
-          :title="item.txt"
-        ></uni-list-item>
+        <uni-list-item @click="goDet" title="功能介绍"></uni-list-item>
+        <uni-list-item @click="goDet" title="法律声明"></uni-list-item>
+        <uni-list-item @click="goDet" title="用户服务协议"></uni-list-item>
       </uni-list>
     </view>
     <view class="update-opera area-wrap">
       <uni-list>
-        <uni-list-item
-          v-for="(item, index) in update"
-          @click="goDet(item)"
-          :key="index"
-          :title="item.txt"
-        ></uni-list-item>
+        <uni-list-item @click="goDet" title="检查更新"></uni-list-item>
       </uni-list>
     </view>
     <view class="logout-btn">退出登录</view>
@@ -41,26 +29,55 @@
 	export default {
 		data() {
 			return {
+        storageSize:0,
 				title: 'Hello',
-        infoList:[
-          {txt:'账号信息'},
-          {txt:'清除本地缓存'},
-        ],
-        operaList:[
-          {txt:'功能介绍'},
-          {txt:'法律声明'},
-          {txt:'用户服务协议'},
-        ],
-        update:[
-          {txt:'检查更新'}
-        ]
+        infoList:[]
 			}
 		},
 		onLoad() {
-
+      this.getStorageSize()
 		},
 		methods: {
+      goDet(item){
+        if(item.operaName){
+          let handleName = item.operaName
+          this[handleName]();
+        }
 
+      },
+      getStorageSize:function(){//获取app缓存
+        let that = this;
+        uni.getStorageInfo({
+          success(res) {
+            let size = res.currentSize;
+            if (size < 1024) {
+              that.storageSize = size + ' B';
+            } else if (size/1024>=1 && size/1024/1024<1) {
+              that.storageSize = Math.floor(size/1024*100)/100 + ' KB';
+            } else if (size/1024/1024>=1) {
+              that.storageSize = Math.floor(size/1024/1024*100)/100 + ' M';
+            }
+          }
+        })
+      },
+      clearStorage:function (){//清除获取app缓存
+        let that = this;
+        uni.showModal({
+          title:'提示',
+          content:'确定清除缓存吗?',
+          confirmText:'立即清除',
+          success(res) {
+            if(res.confirm){
+              uni.clearStorageSync();
+              //重新获取并显示清除后的缓存大小
+              that.getStorageSize();
+              uni.showToast({
+                title:'清除成功'
+              })
+            }
+          }
+        })
+      }
 		}
 	}
 </script>

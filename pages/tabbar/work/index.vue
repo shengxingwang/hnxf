@@ -16,7 +16,7 @@
     <view class="work-manage guid-wrap">
       <view class="title">工作管理</view>
       <view class="guid-list">
-        <view class="item" v-for="(item,index) in workManageList" :key="index">
+        <view class="item" @click="goDet(item)" v-for="(item,index) in workManageList" :key="index">
           <view class="btn-img">
             <image :src="item.iconPath"></image>
           </view>
@@ -44,7 +44,7 @@
 			return {
 				title: 'Hello',
          workManageList:[
-           {btnTxt:'消防监督检查', iconPath:'./../../../static/img/video.png'},
+           {btnTxt:'消防监督检查', iconPath:'./../../../static/img/video.png',pageUrl:'/pages/tabbar/work/inspection/index'},
            {btnTxt:'双随机', iconPath:'./../../../static/img/video.png'},
            {btnTxt:'开业前消防安全检查', iconPath:'./../../../static/img/video.png'},
            {btnTxt:'专项整治', iconPath:'./../../../static/img/video.png'},
@@ -58,7 +58,11 @@
 
 		},
 		methods: {
-
+      goDet(item){
+        uni.navigateTo({
+          url:item.pageUrl
+        })
+      }
 		}
 	}
 </script>

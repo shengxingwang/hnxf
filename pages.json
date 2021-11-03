@@ -63,7 +63,7 @@
       }
     }
     ,{
-      "path" : "pages/tabbar/work/inspection/index",
+      "path" : "pages/work/inspection/index",
       "style" :
         {
             "navigationBarTitleText": "消防监督检查",
@@ -73,7 +73,7 @@
         }
       }
       ,{
-          "path" : "pages/tabbar/work/inspection/spotCheck/index",
+          "path" : "pages/work/inspection/spotCheck/index",
           "style" :
           {
               "navigationBarTitleText": "消防监督抽查",
@@ -82,7 +82,7 @@
               "navigationBarTextStyle": "#fff"
           }
       },{
-            "path" : "pages/tabbar/work/inspection/newTask/index",
+            "path" : "pages/work/inspection/newTask/index",
             "style" :
             {
                 "navigationBarTitleText": "生成任务1",
@@ -90,7 +90,7 @@
             }
       },
       {
-        "path" : "pages/tabbar/work/inspection/newTask/newUnit",
+        "path" : "pages/work/inspection/newTask/newUnit",
         "style" :
         {
             "navigationBarTitleText": "生成任务",
@@ -98,7 +98,7 @@
         }
       },
       {
-        "path" : "pages/tabbar/work/inspection/newTask/taskDetail",
+        "path" : "pages/work/inspection/newTask/taskDetail",
         "style" :
         {
             "navigationBarTitleText": "任务详情",
@@ -106,7 +106,7 @@
         }
       },
       {
-        "path" : "pages/tabbar/work/inspection/newTask/unitDtetail",
+        "path" : "pages/work/inspection/newTask/unitDtetail",
         "style" :
         {
             "navigationBarTitleText": "被检查单位详情",
@@ -114,13 +114,22 @@
         }
       },
       {
-        "path" : "pages/tabbar/work/inspection/newTask/taskStep",
+        "path" : "pages/work/inspection/newTask/taskStep",
         "style" :
         {
             "navigationBarTitleText": "拍照确认",
             "enablePullDownRefresh": false
         }
+      },
+      {
+        "path" : "pages/work/inspection/reportCheck/reportCheck",
+        "style" :
+        {
+            "navigationBarTitleText": "举报投诉核查/处理",
+            "enablePullDownRefresh": false
+        }
       }
+
 
     ],
 	"tabBar": {
@@ -130,26 +139,26 @@
 		"selectedColor": "#1F65B0",
 		"list": [{
 				"pagePath": "pages/tabbar/home/index",
-				"iconPath": "static/img/tabbar/home.png",
-				"selectedIconPath": "static/img/tabbar/homeactive.png",
+				"iconPath": "./static/images/index.png",
+				"selectedIconPath": "./static/images/index-selected.png",
 				"text": "首页"
 			},
 			{
 				"pagePath": "pages/tabbar/work/index",
-				"iconPath": "static/img/tabbar/guanzhu.png",
-				"selectedIconPath": "static/img/tabbar/guanzhuactive.png",
+				"iconPath": "./static/images/gzt.png",
+				"selectedIconPath": "./static/images/gztl.png",
 				"text": "工作台"
 			},
 			{
 				"pagePath": "pages/tabbar/message/index",
-				"iconPath": "static/img/tabbar/news.png",
-				"selectedIconPath": "static/img/tabbar/newsactive.png",
+				"iconPath": "./static/images/xx.png",
+				"selectedIconPath": "./static/images/xx-action.png",
 				"text": "消息"
 			},
 			{
 				"pagePath": "pages/tabbar/my/index",
-				"iconPath": "static/img/tabbar/me.png",
-				"selectedIconPath": "static/img/tabbar/meactive.png",
+				"iconPath": "./static/images/center.png",
+				"selectedIconPath": "./static/images/center-selected.png",
 				"text": "我的"
 			}
 		]

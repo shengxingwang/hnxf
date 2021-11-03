@@ -4,10 +4,10 @@
       <image mode="aspectFill" src="../../static/img/release.png"></image>
     </view>
 		<div class="sign_form">
-      <van-field v-model="form.userName" left-icon="../../static/img/release.png" placeholder="请输入用户名" />
-      <van-field v-model="form.password" left-icon="../../static/img/release.png" placeholder="请输入密码" />
+      <van-field v-model="form.userName" left-icon="../../static/images/phone_icon.png" placeholder="请输入用户名" />
+      <van-field v-model="form.password" left-icon="../../static/images/pwd_icon.png" placeholder="请输入密码" />
       <view class="flex-row">
-          <van-field v-model="sms" left-icon="../../static/img/release.png" clearable placeholder="请输入验证码">
+          <van-field v-model="sms" left-icon="../../static/images/yzm_icon.png" clearable placeholder="请输入验证码">
          </van-field>
          <image class="yzm" src="../../static/img/release.png"></image>
       </view>

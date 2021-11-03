@@ -16,7 +16,7 @@
 		data() {
 			return {
         linkList:[
-          {txt:'消防监督抽查'},
+          {txt:'消防监督抽查', pageUrl:'/pages/tabbar/work/inspection/spotCheck/index'},
           {txt:'举报投诉核查'},
           {txt:'大型活动安全检查任务'},
           {txt:'责令限期改正复查'},
@@ -26,7 +26,14 @@
          {txt:'其他检查'}
         ]
 			};
-		}
+		},
+    methods:{
+      goDet(item){
+        uni.navigateTo({
+          url:item.pageUrl
+        })
+      }
+    }
 	}
 </script>
 

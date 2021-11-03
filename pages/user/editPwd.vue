@@ -2,8 +2,8 @@
 	<view class="edit-pwd-wrap">
     <view class="tit">修改密码</view>
 		<div class="sign_form">
-      <van-field v-model="form.userName" left-icon="../../static/img/release.png" placeholder="请输入用户名" />
-      <van-field v-model="form.password" left-icon="../../static/img/release.png" placeholder="请输入密码" />
+      <van-field v-model="form.userName" left-icon="../../static/images/phone_icon.png" placeholder="请输入用户名" />
+      <van-field v-model="form.password" left-icon="../../static/images/pwd_icon.png" placeholder="请输入密码" />
       <view class="tip">密码不低于8位，必须包含字母及符号</view>
       <view class="btn-wrap">
         <van-button type="info"  class="sub-btn" @click="getIosLogin">确认修改</van-button>

@@ -11,7 +11,7 @@
           <van-button size="small" type="info">发送验证码</van-button>
         </template>
       </van-field>
-      <van-field v-model="form.password" left-icon="../../static/img/release.png" placeholder="请输入短信验证码" />
+      <van-field v-model="form.password" left-icon="../../static/images/yzm_icon.png" placeholder="请输入短信验证码" />
       <view class="btn-wrap">
         <van-button type="info"  class="sub-btn" @click="getIosLogin">登录</van-button>
       </view>
