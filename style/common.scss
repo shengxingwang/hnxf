@@ -9,5 +9,20 @@ input{
   padding-left: 10rpx;
 }
 .btn{
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
   border-radius: 6rpx;
+}
+.btn-orange{
+  background: #FF8300;
+}
+.btn-green{
+    background: #5C9F16;
+}
+.btn-grey{
+  background: #999999;
+}
+.btn-primary{
+  background: #1F65B0;
 }

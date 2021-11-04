@@ -68,8 +68,7 @@
         {
             "navigationBarTitleText": "消防监督检查",
             "enablePullDownRefresh": false,
-            "navigationBarBackgroundColor": "#1F65B0",
-            "navigationBarTextStyle": "#fff"
+            "navigationBarBackgroundColor": "#1F65B0"
         }
       }
       ,{
@@ -78,8 +77,7 @@
           {
               "navigationBarTitleText": "消防监督抽查",
               "enablePullDownRefresh": false,
-              "navigationBarBackgroundColor": "#1F65B0",
-              "navigationBarTextStyle": "#fff"
+              "navigationBarBackgroundColor": "#1F65B0"
           }
       },{
             "path" : "pages/work/inspection/newTask/index",
@@ -122,10 +120,35 @@
         }
       },
       {
-        "path" : "pages/work/inspection/reportCheck/reportCheck",
+        "path" : "pages/work/inspection/reportCheck/index",
         "style" :
         {
             "navigationBarTitleText": "举报投诉核查/处理",
+            "enablePullDownRefresh": false
+        }
+      },
+      {
+        "path" : "pages/work/inspection/reportCheck/checkHandle",
+        "style" :
+        {
+            "navigationBarTitleText": "举报投诉核查",
+            "enablePullDownRefresh": false
+        }
+      },
+      {
+        "path" : "pages/work/inspection/reportCheck/reportHandle",
+        "style" :
+        {
+            "navigationBarTitleText": "举报投诉处理",
+            "enablePullDownRefresh": false
+        }
+      }
+	  ,
+      {
+        "path" : "pages/work/inspection/reportCheck/reportDetail",
+        "style" :
+        {
+            "navigationBarTitleText": "举报投诉处理",
             "enablePullDownRefresh": false
         }
       }

@@ -44,7 +44,7 @@
 			return {
 				title: 'Hello',
          workManageList:[
-           {btnTxt:'消防监督检查', iconPath:'./../../../static/img/video.png',pageUrl:'/pages/tabbar/work/inspection/index'},
+           {btnTxt:'消防监督检查', iconPath:'./../../../static/img/video.png',pageUrl:'/pages/work/inspection/index'},
            {btnTxt:'双随机', iconPath:'./../../../static/img/video.png'},
            {btnTxt:'开业前消防安全检查', iconPath:'./../../../static/img/video.png'},
            {btnTxt:'专项整治', iconPath:'./../../../static/img/video.png'},
