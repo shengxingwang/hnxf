@@ -27,7 +27,7 @@
     <view class="retrieve-content">
       <view class="tip">
         <text class="txt">未检索到被检查单位请使用高级检索或</text>
-      <text class="add-new">新增单位</text></view>
+      <text class="add-new" @click="addUnit">新增单位</text></view>
       <view class="tab">
         <view class="tab-head">
           <view class="th">单位名称</view>
@@ -59,7 +59,11 @@
 			}
 		},
 		methods: {
-
+			addUnit(){
+				uni.navigateTo({
+				  url:'/pages/work/inspection/newTask/newUnit'
+				})
+			}
 		}
 	}
 </script>

@@ -15,7 +15,7 @@
       </view>
       <view class="btn">查询</view>
     </view>
-    <view class="creat-duty-btn btn">生成任务</view>
+    <view class="creat-duty-btn btn" @click="createTaek">生成任务</view>
     <view class="task-wrap">
       <view class="item">
         <view class="line">
@@ -111,6 +111,11 @@
 			};
 		},
     methods:{
+      createTaek(){
+        uni.navigateTo({
+          url:'/pages/work/inspection/newTask/index'
+        })
+      },
       bindDateChange(e){
         console.log(e.target.value)
       }

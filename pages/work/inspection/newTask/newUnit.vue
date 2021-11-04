@@ -1,101 +1,73 @@
 <template>
 	<view class="new-unit">
-        <van-field
-            v-model="unitForm.unitName"
-            name="unitName"
-            label="单位名称"
-             required
-            placeholder="请输入单位名称"
-            :rules="[{ required: true, message: '请输入单位名称' }]"
-        />
-        <van-field
-            v-model="unitForm.address"
-            rows="2"
-            autosize
-             required
-            label="单位地址"
-            type="textarea"
-            maxlength="50"
-            placeholder="请输入地址"
-            show-word-limit
-        />
-        <van-field
-            readonly
-            clickable
-             required
-            name="datetimePicker"
-            :value="unitForm.date"
-            label="预定日期"
-            placeholder="选择预定日期"
-            @click="showPicker = true"
-        />
-         <van-field
-            readonly
-            clickable
-             required
-            name="datetimePicker"
-            :value="unitForm.date"
-            label="截至日期"
-            placeholder="选择截至日期"
-            @click="showPicker = true"
-        />
-        <van-field
-            v-model="unitForm.unitName"
-            name="unitName"
-            label="主办人"
-             required
-            placeholder="请输入"
-            :rules="[{ required: true, message: '请输入主办人' }]"
-        />
-        <van-field
-            v-model="unitForm.unitName"
-            name="unitName"
-            label="协办人"
-             required
-            placeholder="请输入"
-            :rules="[{ required: true, message: '请输入协办人' }]"
-        />
-        <div style="margin: 16px;">
-            <van-button round block type="info" native-type="submit">保存</van-button>
-        </div>
-        <van-popup v-model="showPicker" position="bottom">
-            <van-datetime-picker
-                v-model="unitForm.currentDate"
-                type="datetime"
-                title="选择完整时间"
-                @confirm="onConfirm"
-                @cancel="showPicker = false"
-            />
-        </van-popup>
-    </view>
+      <uni-forms :modelValue="unitForm">
+        <uni-forms-item label="单位名称" name="unitName">
+            <uni-easyinput type="text" v-model="unitForm.unitName" placeholder="请输入单位名称" />
+        </uni-forms-item>
+        <uni-forms-item label="预定日期" name="date">
+           <uni-datetime-picker
+               type="datetime"
+               v-model="unitForm.date"
+               @change="changeLog"
+           />
+        </uni-forms-item>
+        <uni-forms-item label="截至日期" name="date">
+           <uni-datetime-picker
+               type="datetime"
+               v-model="unitForm.date"
+               @change="changeLog"
+           />
+        </uni-forms-item>
+        <uni-forms-item label="单位地址" name="unitName">
+            <uni-easyinput type="textarea" v-model="unitForm.unitName" placeholder="请输入单位地址" />
+        </uni-forms-item>
+        <uni-forms-item label="主办人" name="unitName">
+            <uni-data-picker placeholder="请选择主办人" :localdata="xiePeople" popup-title="请选择主办人"
+             @change="onMainchange">
+            </uni-data-picker>
+        </uni-forms-item>
+        <uni-forms-item required name="hobby" label="协办人">
+            <uni-data-checkbox multiple v-model="unitForm.hobby" :localdata="xiePeople"/>
+        </uni-forms-item>
+    </uni-forms>
+      <div style="margin: 16px;">
+          <van-button round block type="info" native-type="submit">保存</van-button>
+      </div>
+  </view>
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
-                currentTime: '12:00',
-                showPicker:false,
-                unitForm:{
-                    unitName:'',
-                    address:'',
-                    date:'',
-                    currentDate:new Date()
-                },
-				showMore:false,
-                checked:false
+        currentTime: '12:00',
+        showPicker:false,
+        unitForm:{
+            unitName:'',
+            address:'',
+            date:'',
+            hobby:'',
+            currentDate:new Date()
+        },
+        xiePeople:[{"value": 0,"text": "篮球"    },{"value": 1,"text": "足球"},{"value": 2,"text": "游泳"}],
+        showMore:false,
+        checked:false
 			}
 		},
 		methods: {
-            onConfirm(time) {
-                this.unitForm.date = time;
-                this.showPicker = false;
-            }
+        onMainchange(e){
+          console.log(e)
+        },
+        onConfirm(time) {
+            this.unitForm.date = time;
+            this.showPicker = false;
+        }
 		}
 	}
 </script>
 
 <style lang="scss" scoped>
   .new-unit{
+    padding:32rpx;
   }
 </style>
